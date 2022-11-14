@@ -19,6 +19,10 @@ module.exports = {
         sm: "640px",
         md: "768px",
       },
+    //   variants: {
+    //     opacity: ["disabled"],
+    //     cursor: ["disabled"],
+    //   },
     },
   },
   plugins: [],

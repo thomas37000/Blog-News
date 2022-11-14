@@ -7,6 +7,8 @@ import "@/assets/tailwind.css";
 
 const query = "tesla";
 
+const pagesShow = 20;
+
 const date = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
   .toISOString()
   .substr(0, 10);
@@ -15,7 +17,7 @@ const token = import.meta.env.VITE_API_TOKEN;
 
 // en ajoutant axios à l'objet "window", on le rend disponible dans tous nos composants
 window.axios = axios.create({
-  baseURL: `https://newsapi.org/v2/everything?q=${query}&from=${date}&sortBy=publishedAt&apiKey=${token}`,
+  baseURL: `https://newsapi.org/v2/everything?q=${query}&from=${date}&sortBy=publishedAt&pageSize=${pagesShow}&apiKey=${token}`,
 });
 
 const app = createApp(App);
